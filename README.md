@@ -20,8 +20,8 @@ and the io_three plugin to import/export and edit them if needed.
 
 ## Technologies, libraries and frameworks used:
   - JQuery
-	- Three JS
-	- Blender
-	- OrbitControls
-	- TrackballControls
-	- SweetAlert
+  - Three JS
+  - Blender
+  - OrbitControls
+  - TrackballControls
+  - SweetAlert
