@@ -4,3 +4,9 @@ on his singlepage-website. With this 3D webapp the user who is interested in pur
 accoustic guitar is able to discover the many indivdual configurations available and
 gets the price of his personal guitar build displayed on the fly.
 
+
+
+
+
+
+![alt text](https://raw.githubusercontent.com/jroWebAndApp/3D-Instruments-Configurator/master/assets/configurator.gif)
