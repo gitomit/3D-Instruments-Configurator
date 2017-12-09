@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>3D instruments configurator</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<!--body where all the configurator elements are set -->
+<body>
+<!-- container for the 3d scene -->
+<div id="container"></div>
+<div class="loaderBar">
+    <div class="progressBar"></div>
+</div>
+<!-- menue -->
+<!--
+<div class="menushop">
+</div>-->
+<div class="menuswitch plus">
+    <div class="menuClickZone"></div>
+    <ul class="s-btn-container menuVis">
+        <li class="s-btn s-bodyBtn">Body Shape</li>
+        <li class="s-btn s-frontwoodBtn">Front Wood</li>
+        <li class="s-btn s-sidewoodBtn">Side Material</li>
+        <li class="s-btn s-neckwoodBtn">Neck Wood</li>
+        <li class="s-btn s-mechanicsBtn">Mechanics</li>
+
+        <li class="s-btn s-rotateBtn">
+            <label class="switch" title="Rotation">
+                <input class="rotateCheckbox" type="checkbox">
+                <div class="slider"></div>
+            </label>
+        </li>
+    </ul>
+</div>
+
+<!-- -->
+<div class="selector">
+    <div id="fabric" class="dragdealer">
+        <div class="handle red-bar"
+             style="perspective: 1000px; backface-visibility: hidden; transform: translateX(0px)"></div>
+    </div>
+    <div id="fabrics" class="dragdealer">
+        <div class="handle red-bar"
+             style="perspective: 1000px; backface-visibility: hidden; transform: translateX(0px)"></div>
+    </div>
+    <div class="overInfo"></div>
+    <div class="selectees">
+        <div class="s-body">
+            <img src="assets/img/shape/normal_shape.png" model="normal" rel="normal" alt="normal">
+            <img src="assets/img/shape/cutaway_shape.png" model="cutaway" rel="cutaway" alt="cutaway">
+        </div>
+        <div class="s-frontwood">
+            <img src="assets/img/wood/oak_menue.jpg" model="oak" rel="oak" alt="maple">
+            <img src="assets/img/wood/frontwood2_menue.jpg" model="frontwood2" rel="frontwood2" alt="ash">
+        </div>
+        <div class="s-sidewood">
+            <img src="assets/img/wood/walnut_menue.jpg" model="sidewood1" rel="sidewood1" alt="walnut">
+            <img src="assets/img/wood/pinebark_menue.jpg" model="pinebark" rel="pinebark" alt="pinebark">
+            <img src="assets/img/wood/carbon_menue.jpg" model="carbon" rel="carbon" alt="carbon">
+        </div>
+        <div class="s-neckwood">
+            <img src="assets/img/wood/mahogany_menue.jpg" model="mahogany" rel="mahogany" alt="mahogany">
+            <img src="assets/img/wood/swampash_menue.jpg" model="swampash" rel="swampash" alt="swampash">
+        </div>
+        <div class="s-fretboard">
+            <img src="assets/img/wood/frontwood2_menue.jpg" model="fretboard1" rel="fretboard1" alt="fretboard1">
+            <img src="assets/img/wood/walnut_menue.jpg" model="fretboard2" rel="fretboard2" alt="fretboard2">
+        </div>
+        <div class="s-mechanics">
+            <img src="assets/img/wood/silver_menue.png" model="mechanics1" rel="silver" alt="silver">
+            <img src="assets/img/wood/black_menue.jpg" model="mechanics2" rel="black" alt="black">
+            <img src="assets/img/wood/gold_menue.png" model="mechanics3" rel="gold" alt="gold">
+        </div>
+    </div>
+</div>
+<div class="price">
+    € <span id="priceFrontend"></span>
+</div>
+<!-- including all library type js files -->
+<script src="js/libsnframeworks/three.min.js"></script>
+<script src="js/libsnframeworks/JSONLoader.js"></script>
+<script src="js/libsnframeworks/jquery.min.js"></script>
+<script src="js/libsnframeworks/TweenMax.min.js"></script>
+<script src="js/libsnframeworks/dragdealer.js"></script>
+<script src="js/libsnframeworks/OrbitControls.js"></script>
+<script src="js/libsnframeworks/sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/css/sweetalert.css">
+
+<!-- including all self written js files -->
+<script src="js/configurator/loader/shapeloader.js"></script>
+<script src="js/configurator/loader/matloader.js"></script>
+<script src="js/configurator/priceCalculation/calculation.js"></script>
+<script src="js/configurator/events/welcomeScreen.js"></script>
+<script src="js/configurator/events/shop.js"></script>
+<script src="js/configurator/events/selectors.js"></script>
+<script src="js/configurator/scene/loadmanager.js"></script>
+<script src="js/configurator/scene/mainscene.js"></script>
+<script src="js/configurator/scene/render.js"></script>
+</body>
+</html>
