@@ -15,7 +15,7 @@ version of the singlepager-website:
 ## Make it work
 To get it running on your machine just copy the project to a (local) webserver and
 navigate to the index.html file. Meshes are in JSON format in json/meshes folder. Use blender
-and the [io_three plugin](https://aur.archlinux.org/packages/blender-plugin-io-three/){:target="_blank"} to import/export and edit them if needed.
+and the [io_three plugin](https://aur.archlinux.org/packages/blender-plugin-io-three/) to import/export and edit them if needed.
 
 ## Technologies, libraries and frameworks used:
   - JQuery
