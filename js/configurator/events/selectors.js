@@ -119,7 +119,6 @@ $('.s-body img').on('click', function () {
             loader.load('json/meshes/shapebase_working.json', shapeloader);
         }
 
-    
     $('.s-body img').removeClass("disabledbutton");
 });
 
@@ -274,14 +273,7 @@ $('.s-neckwood img').on('click', function () {
          matloader(meshToChange, initialLoading, textureChanged, bodyChanged, whatChanged)
     }
     
-
-
-
-
     $('.s-neckwood img').removeClass("disabledbutton");
-
-    // remove a child (neck) of the group and load the new neck with specified material
-    //group.remove(group.children)
 });
 
 /**

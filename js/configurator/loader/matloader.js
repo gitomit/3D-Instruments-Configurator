@@ -57,7 +57,6 @@ function matloader(meshToAddMaterial, initialLoadingBool, textureChanged, bodyCh
         }
     } 
     
-    
     else {
         // if texture changed...
         if(textureChanged === true && bodyChanged === false) {

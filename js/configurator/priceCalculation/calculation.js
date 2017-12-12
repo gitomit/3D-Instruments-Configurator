@@ -18,7 +18,7 @@ function calculationFrontWood(price) {
     priceSet[2][1] = price;
     priceSum = calculatePriceSum(priceSet);
 
-    return priceSum
+    return priceSum;
 }
 
 /**
@@ -29,7 +29,7 @@ function calculationSideWood(price) {
     priceSet[3][1] = price;
     priceSum = calculatePriceSum(priceSet);
 
-    return priceSum
+    return priceSum;
 }
 
 /**
@@ -40,7 +40,7 @@ function calculationNeckWood(price) {
     priceSet[4][1] = price;
     priceSum = calculatePriceSum(priceSet);
 
-    return priceSum
+    return priceSum;
 }
 
 /**

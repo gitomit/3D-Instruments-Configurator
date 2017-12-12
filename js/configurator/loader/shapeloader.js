@@ -9,7 +9,6 @@ function shapeloader(geometry, materials) {
     model_mesh.scale.set(5.5, 5.5, 5.5);
     model_mesh.position.set(0, -2, 0);
 
-
         try {
             matloader(model_mesh, initialLoading, textureChanged, bodyChanged)
         } catch (errMaterialLoader){

@@ -60,7 +60,6 @@ function init() {
     spotlight2.position.set(-300, 300, 1000);
     scene.add(spotlight2);
     
-    
     loader.load('json/meshes/shapebase_working.json', shapeloader);
     loader.load('json/meshes/fretboard_working.json', shapeloader);
     loader.load('json/meshes/bridge1057.json', shapeloader);
