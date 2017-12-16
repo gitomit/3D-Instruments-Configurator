@@ -12,7 +12,10 @@ function shapeloader(geometry, materials) {
         try {
             matloader(model_mesh, initialLoading, textureChanged, bodyChanged)
         } catch (errMaterialLoader){
-            //console.log("error loading material for mesh" + errMaterialLoader)
+            /** do something... as there are some meshes that do not have material in the
+            *   current configurator, there is no error message displayed here. This catch
+            *   can be adjusted later on.
+            **/
         }
 
     group.add(model_mesh);

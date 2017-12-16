@@ -53,7 +53,7 @@ function matloader(meshToAddMaterial, initialLoadingBool, textureChanged, bodyCh
 
         // setting initialLoading to false
         if(lastInitLoaded) {
-            initialLoading = false;
+            initialLoadingBool = false;
         }
     } 
     
