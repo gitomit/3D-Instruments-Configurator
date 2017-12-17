@@ -1,8 +1,8 @@
 # 3D-Instruments-Configurator
 
 ## Description
-A client side javascript/threejs application for a local guitar builder to implement
-on his singlepager-website. With this 3D webapp the user who is interested in purchasing a customized
+A client side javascript/threejs application for a guitar builder to implement
+on his (singlepager-) website. With this 3D webapp the user who is interested in purchasing a customized
 accoustic guitar is able to discover the many indivdual configurations available. Also the price of his setting is displayed and updated just in time.
 
 Here you can see the configurator integrated in an anonymized
