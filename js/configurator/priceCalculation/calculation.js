@@ -6,6 +6,8 @@
 function calculationElement(price, indexOne, indexTwo) {
     priceSet[indexOne][indexTwo] = price;
     priceSum = calculatePriceSum(priceSet);
+
+    return priceSum;
 }
 
 /**
