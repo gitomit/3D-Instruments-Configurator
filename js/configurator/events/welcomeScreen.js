@@ -1,5 +1,6 @@
 /**
- * displays the welcome alert window with the sweetalert plugin
+ * opens the welcome screen on startup of application with the sweetalert library
+ * @return {undefined}
  */
 function welcome() {
     swal({

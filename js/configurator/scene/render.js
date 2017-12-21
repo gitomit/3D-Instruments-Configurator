@@ -1,7 +1,6 @@
 /**
- * rendering function for the scene and rotation of 3d object group
- * @param:
- * @returns:
+ * rendering function for the scene and rotation of 3d object group. Optional rotation
+ * is defined here
  */
 function render() {
     if ($('.rotateCheckbox')[0].checked !== false) {
@@ -19,9 +18,7 @@ function animate() {
     renderer.render(scene, camera);
 }
 
-/**
-*  call of init function of mainscene.js and animating function
-*/
+// call of init and animate function
 init();
 animate();
 

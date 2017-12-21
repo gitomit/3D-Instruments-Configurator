@@ -27,9 +27,7 @@ configArray['neckwood'] = 'mahogany';
 var priceSet = [['body',299], ['workingHoursFixed',279], ['frontwood', 99], ['sidewood', 79], ['neckwood', 149], ['fretboard', 29], ['mechanics', 39]];
 
 /**
- * init function for setting up the scene, controls, camera etc. for the first time on startup of browser application
- * @param:
- * @returns: 
+ * init function for setting up the scene, controls, camera etc. on startup of application
  */
 function init() {
     scene = new THREE.Scene();

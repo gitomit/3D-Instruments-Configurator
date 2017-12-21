@@ -1,7 +1,7 @@
 /**
  * loads new instruments shape into container and calls the material loader
- * @param geometry
- * @param materials
+ * @param geometry: the mesh-geometry to apply materials to
+ * @param materials: the multimaterial passed to the function
  */
 function shapeloader(geometry, materials) {
     material = new THREE.MultiMaterial(materials);
@@ -10,7 +10,7 @@ function shapeloader(geometry, materials) {
     model_mesh.position.set(0, -2, 0);
 
         try {
-            matloader(model_mesh, initialLoading, textureChanged, bodyChanged)
+            matloader(model_mesh, initialLoading, textureChanged, bodyChanged);
         } catch (errMaterialLoader){
             /** do something... as there are some meshes that do not have material in the
             *   current configurator, there is no error message displayed here. This catch

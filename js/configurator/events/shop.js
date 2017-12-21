@@ -1,5 +1,6 @@
 /**
- * displays the welcome alert window with the sweetalert plugin
+ * opens the shop window to buy a configurated guitar online (yet to be implemented) with the sweetalert library
+ * @return {undefined}
  */
 function openShop() {
     swal({

@@ -1,7 +1,9 @@
 /**
- * calculates element price
- * @param price
- * @returns {*}
+ * calculates the elements price 
+ * @param {type} price: the passed price
+ * @param {type} indexOne: priceArray index one
+ * @param {type} indexTwo:  priceArray index two
+ * @return {Number|priceSum}: the sum of all prices of elements to be displayed
  */
 function calculationElement(price, indexOne, indexTwo) {
     priceSet[indexOne][indexTwo] = price;
@@ -11,9 +13,9 @@ function calculationElement(price, indexOne, indexTwo) {
 }
 
 /**
- * calculates price sum
- * @param priceSet
- * @returns {*}
+ * calculates the sum of all prices for the calculationElement function
+ * @param {type} priceSet
+ * @return {Number}
  */
 function calculatePriceSum(priceSet) {
     var priceSum = 0;

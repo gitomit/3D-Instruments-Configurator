@@ -2,7 +2,6 @@
  * provides button click events for the upper right menue that opens up
  */
 $('.menuClickZone').on('click', function (event) {
-
     event.preventDefault();
     if ($('.menuswitch').hasClass('plus')) {
 
@@ -89,14 +88,14 @@ $('.s-body img').on('click', function () {
 
     $('.s-body img').addClass("disabledbutton");
 
-        let children = group.children
+        let children = group.children;
 
 
     for(let i=0; i < children.length; i++) {
             let matArray = children[i].material.materials
             for(let j=0; j < matArray.length; j++) {
                 if(matArray[j].name == 'Body front'){
-                    group.remove(children[i])
+                    group.remove(children[i]);
                 }
             }
         }
@@ -132,20 +131,20 @@ $('.s-frontwood img').on('click', function () {
     if(this.alt =="maple") {
         calculationElement(99, 2, 1);
         $('#priceFrontend').html(priceSum);
-        textureChanged = true
-        bodyChanged = false
+        textureChanged = true;
+        bodyChanged = false;
         configArray['frontwood'] = 'oak';
-        var whatChanged = 'Body front'
-        matloader(model_mesh, initialLoading, textureChanged, bodyChanged, whatChanged)
+        var whatChanged = 'Body front';
+        matloader(model_mesh, initialLoading, textureChanged, bodyChanged, whatChanged);
     }
     else if(this.alt == "ash") {
         calculationElement(159, 2, 1);
         $('#priceFrontend').html(priceSum);
-        textureChanged = true
-        bodyChanged = false
+        textureChanged = true;
+        bodyChanged = false;
         configArray['frontwood'] = 'frontwood2';
-        var whatChanged = 'Body front'
-        matloader(model_mesh, initialLoading, textureChanged, bodyChanged,whatChanged)
+        var whatChanged = 'Body front';
+        matloader(model_mesh, initialLoading, textureChanged, bodyChanged,whatChanged);
     }
 
     $('.s-frontwood img').removeClass("disabledbutton");
@@ -183,30 +182,30 @@ $('.s-sidewood img').on('click', function () {
  if(this.alt =="walnut") {
         calculationElement(79, 3, 1);
         $('#priceFrontend').html(priceSum);
-        textureChanged = true
-        bodyChanged = false
+        textureChanged = true;
+        bodyChanged = false;
         configArray['sidewood'] = 'walnut';
-        var whatChanged = 'Body side'
-        matloader(model_mesh, initialLoading, textureChanged, bodyChanged, whatChanged)
+        var whatChanged = 'Body side';
+        matloader(model_mesh, initialLoading, textureChanged, bodyChanged, whatChanged);
     }
     else if(this.alt == "pinebark") {
         calculationElement(139, 3, 1);
         $('#priceFrontend').html(priceSum);
-        textureChanged = true
-        bodyChanged = false
+        textureChanged = true;
+        bodyChanged = false;
         configArray['sidewood'] = 'pinebark';
-        var whatChanged = 'Body side'
-        matloader(model_mesh, initialLoading, textureChanged, bodyChanged, whatChanged)
+        var whatChanged = 'Body side';
+        matloader(model_mesh, initialLoading, textureChanged, bodyChanged, whatChanged);
     }
 
     else if(this.alt =="carbon") {
         calculationElement(339, 3, 1);
         $('#priceFrontend').html(priceSum);
-        textureChanged = true
-        bodyChanged = false
+        textureChanged = true;
+        bodyChanged = false;
         configArray['sidewood'] = 'carbon';
-        var whatChanged = 'Body side'
-        matloader(model_mesh, initialLoading, textureChanged, bodyChanged, whatChanged)
+        var whatChanged = 'Body side';
+        matloader(model_mesh, initialLoading, textureChanged, bodyChanged, whatChanged);
     }
 
     $('.s-sidewood img').removeClass("disabledbutton");
@@ -245,10 +244,10 @@ $('.s-neckwood img').on('click', function () {
 
     // searches the relevant mesh to modify
     for(let i=0; i < group.children.length; i++) {
-        var singleMeshMaterials = group.children[i].material.materials
+        var singleMeshMaterials = group.children[i].material.materials;
         for(let j=0; j < singleMeshMaterials.length; j++) {
             if(singleMeshMaterials[j].name == 'Hed') {
-                meshToChange = group.children[i]
+                meshToChange = group.children[i];
             }
         }
     }
@@ -258,9 +257,9 @@ $('.s-neckwood img').on('click', function () {
         $('#priceFrontend').html(priceSum);
         textureChanged = true;
         bodyChanged = false;
-        configArray['neckwood'] = 'mahogany'
-        var whatChanged = 'Hed'
-         matloader(meshToChange, initialLoading, textureChanged, bodyChanged, whatChanged)
+        configArray['neckwood'] = 'mahogany';
+        var whatChanged = 'Hed';
+         matloader(meshToChange, initialLoading, textureChanged, bodyChanged, whatChanged);
     }
 
     else if(this.alt == 'swampash') {
@@ -268,9 +267,9 @@ $('.s-neckwood img').on('click', function () {
         $('#priceFrontend').html(priceSum);
         textureChanged = true;
         bodyChanged = false;
-        configArray['neckwood'] = 'swampash'
-        var whatChanged = 'Hed'
-         matloader(meshToChange, initialLoading, textureChanged, bodyChanged, whatChanged)
+        configArray['neckwood'] = 'swampash';
+        var whatChanged = 'Hed';
+         matloader(meshToChange, initialLoading, textureChanged, bodyChanged, whatChanged);
     }
     
     $('.s-neckwood img').removeClass("disabledbutton");
@@ -296,15 +295,15 @@ $('.s-neckwoodBtn').on('click', function () {
 $('.s-mechanics img').on('click', function () {
 
     $('.s-mechanics img').addClass("disabledbutton");
-    var whatChanged = 'Perlemor'
-    var meshToChange = ''
+    var whatChanged = 'Perlemor';
+    var meshToChange = '';
 
     // searches the relevant mesh to modify
     for(let i=0; i < group.children.length; i++) {
-        var singleMeshMaterials = group.children[i].material.materials
+        var singleMeshMaterials = group.children[i].material.materials;
         for(let j=0; j < singleMeshMaterials.length; j++) {
             if(singleMeshMaterials[j].name == 'Perlemor') {
-                meshToChange = group.children[i]
+                meshToChange = group.children[i];
             }
         }
     }
@@ -314,9 +313,9 @@ $('.s-mechanics img').on('click', function () {
         $('#priceFrontend').html(priceSum);
         textureChanged = true;
         bodyChanged = false;
-        configArray['mechanics'] = 'silver'
-        var whatChanged = 'Perlemor'
-         matloader(meshToChange, initialLoading, textureChanged, bodyChanged, whatChanged)
+        configArray['mechanics'] = 'silver';
+        var whatChanged = 'Perlemor';
+         matloader(meshToChange, initialLoading, textureChanged, bodyChanged, whatChanged);
     }
 
     else if(this.alt =="black") {
@@ -324,9 +323,9 @@ $('.s-mechanics img').on('click', function () {
         $('#priceFrontend').html(priceSum);
         textureChanged = true;
         bodyChanged = false;
-        configArray['mechanics'] = 'black'
-        var whatChanged = 'Perlemor'
-         matloader(meshToChange, initialLoading, textureChanged, bodyChanged, whatChanged)
+        configArray['mechanics'] = 'black';
+        var whatChanged = 'Perlemor';
+         matloader(meshToChange, initialLoading, textureChanged, bodyChanged, whatChanged);
     }
 
     else if(this.alt =="gold") {
@@ -334,9 +333,9 @@ $('.s-mechanics img').on('click', function () {
         $('#priceFrontend').html(priceSum);
         textureChanged = true;
         bodyChanged = false;
-        configArray['mechanics'] = 'gold'
-        var whatChanged = 'Perlemor'
-         matloader(meshToChange, initialLoading, textureChanged, bodyChanged, whatChanged)
+        configArray['mechanics'] = 'gold';
+        var whatChanged = 'Perlemor';
+         matloader(meshToChange, initialLoading, textureChanged, bodyChanged, whatChanged);
     }
 
     $('.s-mechanics img').removeClass("disabledbutton");
@@ -348,9 +347,6 @@ $('.s-mechanics img').on('click', function () {
 $('.s-mechanics img').on('click', function () {
 
     $('.s-mechanics img').addClass("disabledbutton");
-
-    
-
     $('.s-mechanics img').removeClass("disabledbutton");
 });
 

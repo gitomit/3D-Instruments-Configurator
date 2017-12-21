@@ -1,7 +1,11 @@
 /**
- * loads new instruments shape and/or textures into container
- * @param geometry
- * @param materials
+ * loads initial and new materials and apply textures to those materials 
+ * @param {type} meshToAddMaterial: the given mesh with its material to map a texture on
+ * @param {type} initialLoadingBool: indicates if initial textures are loaded on startup of application
+ * @param {type} textureChanged: indicates if only a texture in the group of models has changed
+ * @param {type} bodyChanged: indicates if the body has changed
+ * @param {type} whatChanged: indicates which element of group has changed
+ * @return {mesh} meshToAddMaterial: the mesh the material was added to
  */
 function matloader(meshToAddMaterial, initialLoadingBool, textureChanged, bodyChanged, whatChanged) {
     // initialLoading is set to true, all standard textures are loaded to the mesh
@@ -46,6 +50,7 @@ function matloader(meshToAddMaterial, initialLoadingBool, textureChanged, bodyCh
             meshToAddMaterial.material.materials[2].map = THREE.ImageUtils.loadTexture('assets/textures/sidewood/walnut.jpg');
         }
         
+        // label inside the instrument, is never changed
         if(meshToAddMaterial.material.materials[4].name === 'Label'){
             meshToAddMaterial.material.materials[4].map = THREE.ImageUtils.loadTexture('assets/textures/certificate/certificate1.jpg');
             var lastInitLoaded = true;
@@ -64,19 +69,19 @@ function matloader(meshToAddMaterial, initialLoadingBool, textureChanged, bodyCh
                     let materialsArr = meshToAddMaterial.material.materials;
                     for(let i=0; i < materialsArr.length; i++) {
                         if(materialsArr[i].name === 'Body front' && whatChanged === 'Body front'){
-                            let materialToAdd = configArray['frontwood']
+                            let materialToAdd = configArray['frontwood'];
                             materialsArr[i].map = THREE.ImageUtils.loadTexture('assets/textures/frontwood/'+materialToAdd+'.jpg');
                         }
                         if(materialsArr[i].name === 'Hed'){
-                            let materialToAdd = configArray['neckwood']
+                            let materialToAdd = configArray['neckwood'];
                             materialsArr[i].map = THREE.ImageUtils.loadTexture('assets/textures/neckwood/'+materialToAdd+'.jpg');
                         }
                         if(materialsArr[i].name === 'Body side' && whatChanged === 'Body side'){
-                            let materialToAdd = configArray['sidewood']
+                            let materialToAdd = configArray['sidewood'];
                             materialsArr[i].map = THREE.ImageUtils.loadTexture('assets/textures/sidewood/'+materialToAdd+'.jpg');
                         }
                         if(materialsArr[i].name === 'Perlemor' && whatChanged === 'Perlemor') {
-                            let materialToAdd = configArray['mechanics']
+                            let materialToAdd = configArray['mechanics'];
                             materialsArr[i].map = THREE.ImageUtils.loadTexture('assets/textures/mechanics/'+materialToAdd+'.jpg');
                         }
                     }
@@ -86,20 +91,21 @@ function matloader(meshToAddMaterial, initialLoadingBool, textureChanged, bodyCh
         else if(textureChanged === false && bodyChanged === true) {
             // front body
             if(meshToAddMaterial.material.materials[0].name === 'Body front') {
-                let materialToAdd = configArray['frontwood']
+                let materialToAdd = configArray['frontwood'];
                 meshToAddMaterial.material.materials[0].map = THREE.ImageUtils.loadTexture('assets/textures/frontwood/'+materialToAdd+'.jpg');
             }
 
             // side body
             if(meshToAddMaterial.material.materials[2].name === 'Body side'){
-                let materialToAdd = configArray['sidewood']
+                let materialToAdd = configArray['sidewood'];
                 meshToAddMaterial.material.materials[2].map = THREE.ImageUtils.loadTexture('assets/textures/sidewood/'+materialToAdd+'.jpg');
             }
 
+            // label
             if(meshToAddMaterial.material.materials[4].name === 'Label'){
                 meshToAddMaterial.material.materials[4].map = THREE.ImageUtils.loadTexture('assets/textures/certificate/certificate1.jpg');
             }
         }
     }
-    return meshToAddMaterial
+    return meshToAddMaterial;
 }
