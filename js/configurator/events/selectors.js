@@ -102,7 +102,7 @@ $('.s-body img').on('click', function () {
         }
 
         if(this.alt =="cutaway") {
-            calculationBody(269);
+            calculationElement(269, 0, 1);
             $('#priceFrontend').html(priceSum);
             textureChanged = false;
             bodyChanged = true;
@@ -111,7 +111,7 @@ $('.s-body img').on('click', function () {
         }
 
         else if(this.alt=="normal") {
-            calculationBody(299);
+            calculationElement(299, 0, 1);
             $('#priceFrontend').html(priceSum);
             textureChanged = false;
             bodyChanged = true;
@@ -130,7 +130,7 @@ $('.s-frontwood img').on('click', function () {
     $('.s-frontwood img').addClass("disabledbutton");
 
     if(this.alt =="maple") {
-        calculationFrontWood(99)
+        calculationElement(99, 2, 1);
         $('#priceFrontend').html(priceSum);
         textureChanged = true
         bodyChanged = false
@@ -139,7 +139,7 @@ $('.s-frontwood img').on('click', function () {
         matloader(model_mesh, initialLoading, textureChanged, bodyChanged, whatChanged)
     }
     else if(this.alt == "ash") {
-        calculationFrontWood(159)
+        calculationElement(159, 2, 1);
         $('#priceFrontend').html(priceSum);
         textureChanged = true
         bodyChanged = false
@@ -181,7 +181,7 @@ $('.s-sidewood img').on('click', function () {
     $('.s-sidewood img').addClass("disabledbutton");
 
  if(this.alt =="walnut") {
-        calculationSideWood(79)
+        calculationElement(79, 3, 1);
         $('#priceFrontend').html(priceSum);
         textureChanged = true
         bodyChanged = false
@@ -190,7 +190,7 @@ $('.s-sidewood img').on('click', function () {
         matloader(model_mesh, initialLoading, textureChanged, bodyChanged, whatChanged)
     }
     else if(this.alt == "pinebark") {
-        calculationSideWood(139)
+        calculationElement(139, 3, 1);
         $('#priceFrontend').html(priceSum);
         textureChanged = true
         bodyChanged = false
@@ -200,7 +200,7 @@ $('.s-sidewood img').on('click', function () {
     }
 
     else if(this.alt =="carbon") {
-        calculationSideWood(269)
+        calculationElement(339, 3, 1);
         $('#priceFrontend').html(priceSum);
         textureChanged = true
         bodyChanged = false
@@ -254,7 +254,7 @@ $('.s-neckwood img').on('click', function () {
     }
 
     if(this.alt =="mahogany") {
-        calculationNeckWood(149);
+        calculationElement(149, 4, 1);
         $('#priceFrontend').html(priceSum);
         textureChanged = true;
         bodyChanged = false;
@@ -264,7 +264,7 @@ $('.s-neckwood img').on('click', function () {
     }
 
     else if(this.alt == 'swampash') {
-        calculationNeckWood(99);
+        calculationElement(119, 4, 1);
         $('#priceFrontend').html(priceSum);
         textureChanged = true;
         bodyChanged = false;
@@ -310,7 +310,7 @@ $('.s-mechanics img').on('click', function () {
     }
 
     if(this.alt =="silver") {
-        calculationMechanics(39);
+        calculationElement(39, 5, 1);
         $('#priceFrontend').html(priceSum);
         textureChanged = true;
         bodyChanged = false;
@@ -320,7 +320,7 @@ $('.s-mechanics img').on('click', function () {
     }
 
     else if(this.alt =="black") {
-        calculationMechanics(79);
+        calculationElement(79, 5, 1);
         $('#priceFrontend').html(priceSum);
         textureChanged = true;
         bodyChanged = false;
@@ -330,7 +330,7 @@ $('.s-mechanics img').on('click', function () {
     }
 
     else if(this.alt =="gold") {
-        calculationMechanics(139);
+        calculationElement(129, 5, 1);
         $('#priceFrontend').html(priceSum);
         textureChanged = true;
         bodyChanged = false;
