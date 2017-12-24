@@ -71,6 +71,7 @@ body {
 
 .menushop {
     background-color: #878181;
+    
     cursor: pointer;
     display: block;
     height: 30px;
@@ -86,44 +87,23 @@ body {
 }
 
 .menushop::before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 16px;
-    height: 2px;
-    background-color: white;
-    transform: rotate(45deg);
-    left: 50%;
-    margin-left: -8px;
-    top: 50%;
-    margin-top: -1px;
-    -webkit-transition: all .2s cubic-bezier(0.86, 0, 0.07, 1);
-    transition: all .2s cubic-bezier(0.86, 0, 0.07, 1);
-    border-radius: 2px;
 }
 
 .menushop::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 2px;
-    height: 16px;
-    background-color: white;
-    transform: rotate(45deg);
-    left: 50%;
-    margin-left: -1px;
-    top: 50%;
-    margin-top: -8px;
-    -webkit-transition: all .2s cubic-bezier(0.86, 0, 0.07, 1);
-    transition: all .2s cubic-bezier(0.86, 0, 0.07, 1);
-    border-radius: 2px;
 }
 
 .menushop.plus::before,
 .menushop.plus::after {
-    -webkit-transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
-    transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
-    transform: rotate(0deg);
+
+    content: '';
+    display: block;
+    height: 30px;  
+    width: 30px;  
+    position: absolute;
+    top: 0px;
+    left: -40px;
+      /*background */
+    background: #878181 url(ico.png) no-repeat 0px 0px;
 }
 
 
