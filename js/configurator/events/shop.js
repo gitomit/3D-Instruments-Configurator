@@ -3,11 +3,15 @@
  * @return {undefined}
  */
 function openShop() {
-    swal({
-        title: "Contact us!",
-        text: "The shop function is not yet implemented. Please contact us under <b>gizzmoeJun@gizzmoes.com<b> and we will get in contact with you about your personal configuration!",
-        html: true,
-        confirmButtonColor:"#878181",
-        confirmButtonText: "OK",
-    });
+    swal.withForm({
+    	title: 'Contact Us!',
+    	text: 'The shop function is not yet implemented. Please send us an email and we will get in contact with you about your configuration.',
+    	confirmButtonColor: '#878181',
+    	confirmButtonText: 'Send!',
+    	closeOnConfirm: true,
+    	formFields: [
+    	{id: 'name', placeholder: 'name'},
+    	{id: 'forename', placeholder: 'forename'},
+    	{id: 'email', placeholder: 'email'}]
+    })
 }
